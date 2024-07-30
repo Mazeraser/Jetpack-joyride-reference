@@ -26,7 +26,6 @@ namespace Assets.Codebase.Infrastructure
         private void Start()
         {
             GeneratedPoint.NewPointGeneratedEvent += SetNewPoint;
-            PlayerLife.DeathEvent += Die;
 
             _animator = GetComponent<CharacterAnimator>();
             _rb = GetComponent<Rigidbody2D>();
@@ -44,13 +43,8 @@ namespace Assets.Codebase.Infrastructure
         private void OnDestroy()
         {
             GeneratedPoint.NewPointGeneratedEvent -= SetNewPoint;
-            PlayerLife.DeathEvent -= Die;
         }
 
-        private void Die()
-        {
-            Destroy(this.gameObject);
-        }
         public void Move(Vector2 direction, IMovable movable)
         {
             movable.Turn(direction.normalized);

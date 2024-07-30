@@ -9,8 +9,10 @@ namespace Assets.Codebase.Mechanics.GeneratorSystem
     {
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.CompareTag("Player"))
+            {
                 Destroy(gameObject);
+            }
         }
     }
 }

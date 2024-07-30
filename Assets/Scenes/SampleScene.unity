@@ -997,6 +997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeDuration: 1
+  _activateButton: {fileID: 1917412463}
 --- !u!225 &464405556
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1549,6 +1550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeDuration: 0.1
+  _activateButton: {fileID: 1917412463}
 --- !u!225 &952702438
 CanvasGroup:
   m_ObjectHideFlags: 0

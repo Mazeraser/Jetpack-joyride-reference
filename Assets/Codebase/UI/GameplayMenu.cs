@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using DG.Tweening;
-using System;
+using Zenject;
 
 namespace Assets.Codebase.UI
 {
@@ -11,6 +8,16 @@ namespace Assets.Codebase.UI
     {
         [SerializeField]
         private float _fadeDuration;
+        [SerializeField]
+        private GameObject _activateButton;
+
+        private Fade _fade;
+
+        [Inject]
+        private void Construct(Fade fade)
+        {
+            _fade = fade;
+        }
 
         public virtual void Start()
         {
@@ -19,13 +26,23 @@ namespace Assets.Codebase.UI
 
         public void Activate()
         {
-            FadeIn(_fadeDuration, GetComponent<CanvasGroup>());
+            _activateButton?.SetActive(false);
+            _fade.FadeIn(_fadeDuration, GetComponent<CanvasGroup>(), () =>
+            {
+                Time.timeScale = 0f;
+                Debug.Log("FadeIn animation is end");
+            });
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
         public void Deactivate()
         {
             Time.timeScale = 1f;
-            FadeOut(_fadeDuration, GetComponent<CanvasGroup>());
+            _activateButton?.SetActive(true);
+            _fade.FadeOut(_fadeDuration, GetComponent<CanvasGroup>(), () =>
+            {
+                Time.timeScale = 1f;
+                Debug.Log("FadeOut animation is end");
+            });
             GetComponent<CanvasGroup>().blocksRaycasts = false;
         }
         public void Reset()
@@ -34,31 +51,8 @@ namespace Assets.Codebase.UI
         }
         public void Exit()
         {
-            Application.Quit();
-        }
-
-        private void FadeIn(float duration, CanvasGroup canvasGroup)
-        {
-            FadeCanvasGroup(1f, duration, canvasGroup,
-                () =>
-                {
-                    Time.timeScale = 0f;
-                    Debug.Log("FadeIn animation is end");
-                });
-        }
-        private void FadeOut(float duration, CanvasGroup canvasGroup)
-        {
-            FadeCanvasGroup(0f, duration, canvasGroup,
-                () =>
-                {
-                    Debug.Log("FadeOut animation is end");
-                });
-        }
-
-        private void FadeCanvasGroup(float fadeValue, float duration, CanvasGroup canvasGroup, TweenCallback onEnd)
-        {
-            canvasGroup.DOFade(fadeValue, duration).OnComplete(onEnd);
+            SceneManager.LoadScene(0);
         }
     }
 }
-    
+

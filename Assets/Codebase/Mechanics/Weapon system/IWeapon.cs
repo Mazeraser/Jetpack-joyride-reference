@@ -6,6 +6,7 @@ namespace Assets.Codebase.Mechanics.WeaponSystem
 {
     public interface IWeapon
     {
-        void Attack();
+        float Damage {  get; set; }
+        void Shoot();
     }
 }
