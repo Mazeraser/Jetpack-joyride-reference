@@ -17,9 +17,9 @@ namespace Assets.Codebase.Mechanics.AnimationSystem
 
         public void SetPhysicInteraction(Vector2 bodyVelocity)
         {
-            if (bodyVelocity.y != 0)
+            if (bodyVelocity.y > 0)
                 SetState(1);
-            else if (bodyVelocity.y == 0)
+            else if (bodyVelocity.y <= 0)
                 SetState(0);
 
             GetComponent<Animator>().SetFloat("state", (float)state);

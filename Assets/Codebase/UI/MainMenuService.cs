@@ -19,6 +19,11 @@ namespace Assets.Codebase.UI
             _fade = fade;
         }
 
+        private void Start()
+        {
+            Time.timeScale = 1f;
+        }
+
         public void Activate(CanvasGroup canvasGroup)
         {
             _fade.FadeIn(_fadeDuration, canvasGroup, () => { Debug.Log("FadeIn is end."); });

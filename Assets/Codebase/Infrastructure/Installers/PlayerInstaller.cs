@@ -1,12 +1,15 @@
 using UnityEngine;
 using Zenject;
 using Assets.Codebase.Mechanics.ControllSystem;
+using Assets.Codebase.Mechanics.LiveSystem;
 
 public class PlayerInstaller : MonoInstaller
 {
 
     [SerializeField]
-    private GameObject _player;
+    private GameObject[] _playerList;
+    
+
     [SerializeField]
     private Transform _spawnTransform;
     
@@ -14,7 +17,8 @@ public class PlayerInstaller : MonoInstaller
     {
         var player = Container.
             InstantiatePrefabForComponent<Player>
-            (_player,_spawnTransform);
+            (_playerList[PlayerPrefs.HasKey("CharacterIndex")?PlayerPrefs.GetInt("CharacterIndex"):0],
+            _spawnTransform);
 
         Container.BindInterfacesAndSelfTo<Player>().
             FromInstance(player).

@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2875860452026676656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8108132993441035230}
+  - component: {fileID: 6806498043031060195}
+  m_Layer: 5
+  m_Name: Weapon section
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8108132993441035230
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875860452026676656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6265804125731353247}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6806498043031060195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875860452026676656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69243119cdba6ea46a3f9370b7fad570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shop: {fileID: 3393649757320813434}
+--- !u!1 &4424134983863244962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532621844251583967}
+  - component: {fileID: 7607004770231897616}
+  m_Layer: 5
+  m_Name: Vehicle section
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1532621844251583967
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424134983863244962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6265804125731353247}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7607004770231897616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424134983863244962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3708ea407a26d64f8894a308bf40860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shop: {fileID: 3393649757320813434}
+--- !u!1 &6294979670499677204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6265804125731353247}
+  - component: {fileID: 3393649757320813434}
+  m_Layer: 5
+  m_Name: Shop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6265804125731353247
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294979670499677204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8108132993441035230}
+  - {fileID: 1532621844251583967}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3393649757320813434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294979670499677204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5f920af6dd1ec4eb7fc119ff03e3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceStorage: {fileID: 11400000, guid: 00e268591ad2e23478c7ea10780c694d, type: 2}
+  VehicleList:
+  - _cost: 10
+    _itemName: "\u041B\u0435\u0442\u0430\u044E\u0449\u0430\u044F \u0442\u0430\u0440\u0435\u043B\u043A\u0430"
+    _bought: 0
+    ForCharacter: {fileID: 592022006231645929, guid: e814077b29b42a645a2cd64ed5293dc4, type: 3}
+    _section: {fileID: 7607004770231897616}
+    _vehiclePower: 2
+    _vehicleImage: {fileID: 0}
+  - _cost: 10
+    _itemName: "\u0420\u0430\u043A\u0435\u0442\u0430"
+    _bought: 0
+    ForCharacter: {fileID: 1652835401890761329, guid: 554352a67bc7d26419f55bd5fd227bb3, type: 3}
+    _section: {fileID: 7607004770231897616}
+    _vehiclePower: 5
+    _vehicleImage: {fileID: 0}
+  WeaponList:
+  - _cost: 10
+    _itemName: "\u041B\u0430\u0437\u0435\u0440\u043D\u0430\u044F \u043F\u0443\u0448\u043A\u0430"
+    _bought: 0
+    ForCharacter: {fileID: 592022006231645929, guid: e814077b29b42a645a2cd64ed5293dc4, type: 3}
+    _section: {fileID: 6806498043031060195}
+    _weapon: {fileID: 4194012125945098801, guid: 678a398d672bcc542b0b0cfd49c84a6a, type: 3}
+  - _cost: 10
+    _itemName: "\u0420\u0430\u043A\u0435\u0442\u043D\u0438\u0446\u0430"
+    _bought: 0
+    ForCharacter: {fileID: 1652835401890761329, guid: 554352a67bc7d26419f55bd5fd227bb3, type: 3}
+    _section: {fileID: 6806498043031060195}
+    _weapon: {fileID: 238214648911731899, guid: e231dba4f0adb4f48ba0d1177b9983e2, type: 3}

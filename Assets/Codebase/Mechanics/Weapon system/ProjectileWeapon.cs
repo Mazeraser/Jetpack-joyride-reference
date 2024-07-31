@@ -1,3 +1,4 @@
+using Assets.Codebase.Mechanics.LiveSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,16 +9,15 @@ namespace Assets.Codebase.Mechanics.WeaponSystem
     {
         [SerializeField]
         private GameObject _projectile;
+        public GameObject Projectile => _projectile;
         [SerializeField]
         private float _shootFrequency;
-        [SerializeField]
-        private float _damage;
-        public float Damage
+        public float ShootFrequency
         {
-            get => _damage;
-            set => _damage = value;
+            get => _shootFrequency;
+            set => _shootFrequency = value;
         }
-        
+
         private float _timer = 0;
 
         public void Shoot()

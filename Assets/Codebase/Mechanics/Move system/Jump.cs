@@ -27,6 +27,10 @@ namespace Assets.Codebase.Mechanics.MoveSystem
         {
             get { return _jumpPower; }
         }
+        public float SetPower
+        {
+            set => _jumpPower = value;
+        }
 
         [SerializeField]
         private float _standartGravityScale;

@@ -6,7 +6,10 @@ namespace Assets.Codebase.Mechanics.LiveSystem
 {
     public class ProjectileLife : CoreLife
     {
-        
+        private void OnTriggerExit2D()
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
     
