@@ -149,31 +149,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceStorage: {fileID: 11400000, guid: 00e268591ad2e23478c7ea10780c694d, type: 2}
-  VehicleList:
-  - _cost: 10
-    _itemName: "\u041B\u0435\u0442\u0430\u044E\u0449\u0430\u044F \u0442\u0430\u0440\u0435\u043B\u043A\u0430"
-    _bought: 0
-    ForCharacter: {fileID: 592022006231645929, guid: e814077b29b42a645a2cd64ed5293dc4, type: 3}
-    _section: {fileID: 7607004770231897616}
-    _vehiclePower: 2
-    _vehicleImage: {fileID: 0}
-  - _cost: 10
-    _itemName: "\u0420\u0430\u043A\u0435\u0442\u0430"
-    _bought: 0
-    ForCharacter: {fileID: 1652835401890761329, guid: 554352a67bc7d26419f55bd5fd227bb3, type: 3}
-    _section: {fileID: 7607004770231897616}
-    _vehiclePower: 5
-    _vehicleImage: {fileID: 0}
-  WeaponList:
-  - _cost: 10
-    _itemName: "\u041B\u0430\u0437\u0435\u0440\u043D\u0430\u044F \u043F\u0443\u0448\u043A\u0430"
-    _bought: 0
-    ForCharacter: {fileID: 592022006231645929, guid: e814077b29b42a645a2cd64ed5293dc4, type: 3}
-    _section: {fileID: 6806498043031060195}
-    _weapon: {fileID: 4194012125945098801, guid: 678a398d672bcc542b0b0cfd49c84a6a, type: 3}
-  - _cost: 10
-    _itemName: "\u0420\u0430\u043A\u0435\u0442\u043D\u0438\u0446\u0430"
-    _bought: 0
-    ForCharacter: {fileID: 1652835401890761329, guid: 554352a67bc7d26419f55bd5fd227bb3, type: 3}
-    _section: {fileID: 6806498043031060195}
-    _weapon: {fileID: 238214648911731899, guid: e231dba4f0adb4f48ba0d1177b9983e2, type: 3}
+  VehicleList: []
+  WeaponList: []

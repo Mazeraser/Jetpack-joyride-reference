@@ -42,7 +42,7 @@ namespace Codebase.InputSystem
             ""bindings"": [
                 {
                     ""name"": ""1D Axis"",
-                    ""id"": ""c2b9efc0-a487-43bd-be98-8957375b618a"",
+                    ""id"": ""937ba618-8c7f-447c-8e18-7fe5f3ac802b"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -52,23 +52,23 @@ namespace Codebase.InputSystem
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""6f3d4230-f380-4444-a797-4b5540c16188"",
-                    ""path"": """",
+                    ""name"": ""1D Axis"",
+                    ""id"": ""b6054136-a761-44da-8399-5f547b842951"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""positive"",
-                    ""id"": ""1637acf6-a889-4923-be72-861946dd9e9b"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""913f7d5a-c448-4415-bcc4-7a7d4c9e96fd"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -78,11 +78,11 @@ namespace Codebase.InputSystem
     ],
     ""controlSchemes"": [
         {
-            ""name"": ""Keyboard"",
-            ""bindingGroup"": ""Keyboard"",
+            ""name"": ""Mouse"",
+            ""bindingGroup"": ""Mouse"",
             ""devices"": [
                 {
-                    ""devicePath"": ""<Keyboard>"",
+                    ""devicePath"": ""<Mouse>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }
@@ -196,13 +196,13 @@ namespace Codebase.InputSystem
             }
         }
         public MoveActions @Move => new MoveActions(this);
-        private int m_KeyboardSchemeIndex = -1;
-        public InputControlScheme KeyboardScheme
+        private int m_MouseSchemeIndex = -1;
+        public InputControlScheme MouseScheme
         {
             get
             {
-                if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
-                return asset.controlSchemes[m_KeyboardSchemeIndex];
+                if (m_MouseSchemeIndex == -1) m_MouseSchemeIndex = asset.FindControlSchemeIndex("Mouse");
+                return asset.controlSchemes[m_MouseSchemeIndex];
             }
         }
         public interface IMoveActions

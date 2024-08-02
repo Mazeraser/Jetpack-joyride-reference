@@ -8,7 +8,7 @@ namespace Assets.Codebase.Mechanics.LiveSystem
     {
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Obstacle"))
+            if (collision.gameObject.CompareTag("Obstacle")&& collision.gameObject.GetComponent<ILife>()!=null)
             {
                 TakeDamage(collision.gameObject.GetComponent<ILife>().MaxHP); 
                 Destroy(collision.gameObject);

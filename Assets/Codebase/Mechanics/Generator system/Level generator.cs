@@ -13,13 +13,17 @@ namespace Assets.Codebase.Mechanics.GeneratorSystem
         private void Start()
         {
             Character.GenerateNewPartEvent += Generate;
-
-            Generate(transform);
+        }
+        private void OnDestroy()
+        {
+            Character.GenerateNewPartEvent -= Generate;
         }
 
         public void Generate(Transform generate_position)
         {
-            Instantiate(_levelParts[Random.Range(0,_levelParts.Length)], generate_position.position ,Quaternion.identity);
+            GameObject part = _levelParts[Random.Range(0, _levelParts.Length)];
+            Debug.Log($"{part.name} is generated");
+            Instantiate(part, new Vector3(part.transform.position.x+generate_position.position.x,0,0) ,Quaternion.identity);
         }
     }
 }

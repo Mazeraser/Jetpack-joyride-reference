@@ -26,12 +26,12 @@ namespace Assets.Codebase.UI
 
         public void Activate(CanvasGroup canvasGroup)
         {
-            _fade.FadeIn(_fadeDuration, canvasGroup, () => { Debug.Log("FadeIn is end."); });
+            _fade.FadeIn(_fadeDuration, canvasGroup, () => { });
             canvasGroup.blocksRaycasts = true;
         }
         public void Deactivate(CanvasGroup canvasGroup)
         {
-            _fade.FadeOut(_fadeDuration, canvasGroup, () => { Debug.Log("FadeOut is end."); });
+            _fade.FadeOut(_fadeDuration, canvasGroup, () => { });
             canvasGroup.blocksRaycasts = false;
         }
 

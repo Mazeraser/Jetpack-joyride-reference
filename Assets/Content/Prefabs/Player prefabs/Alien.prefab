@@ -282,11 +282,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 1
-  _jumpPower: 3
+  _jumpPower: 0.5
   _ignoreGrounding: 1
   _isGrounded: 0
   _standartGravityScale: 1
-  _fallingGravityScale: 6
+  _fallingGravityScale: 1
 --- !u!114 &3051258891255244868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29f61993ba7e6b40a59e9fec60137d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weapon: {fileID: 0}
+  _weapon: {fileID: 4194012125945098801, guid: 678a398d672bcc542b0b0cfd49c84a6a, type: 3}
   _vehicle: {fileID: 0}
 --- !u!114 &3416938890166828336
 MonoBehaviour:

@@ -30,7 +30,6 @@ namespace Assets.Codebase.UI
             _fade.FadeIn(_fadeDuration, GetComponent<CanvasGroup>(), () =>
             {
                 Time.timeScale = 0f;
-                Debug.Log("FadeIn animation is end");
             });
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
@@ -41,7 +40,6 @@ namespace Assets.Codebase.UI
             _fade.FadeOut(_fadeDuration, GetComponent<CanvasGroup>(), () =>
             {
                 Time.timeScale = 1f;
-                Debug.Log("FadeOut animation is end");
             });
             GetComponent<CanvasGroup>().blocksRaycasts = false;
         }

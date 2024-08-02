@@ -35,8 +35,11 @@ namespace Assets.Codebase.Infrastructure
         }
         private void Update()
         {
-            if (transform.position.x > _lastGeneratePosition.position.x)
-                GenerateNewPartEvent?.Invoke(_lastGeneratePosition);
+            if (_lastGeneratePosition == null || transform.position.x > _lastGeneratePosition.position.x)
+            {
+                Debug.Log("Generated new level");
+                GenerateNewPartEvent?.Invoke(_lastGeneratePosition!=null?_lastGeneratePosition:transform);
+            }
 
             _animator.SetPhysicInteraction(_rb.velocity);
         }

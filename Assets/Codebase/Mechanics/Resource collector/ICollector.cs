@@ -6,7 +6,7 @@ namespace Assets.Codebase.Mechanics.ResourceCollector
 {
     public interface ICollector
     {
-        void Collect(int count); 
+        void Collect(ref int storage, int count); 
     }
 }
     

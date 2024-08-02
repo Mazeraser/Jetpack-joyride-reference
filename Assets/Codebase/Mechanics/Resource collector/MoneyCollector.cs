@@ -9,21 +9,10 @@ namespace Assets.Codebase.Mechanics.ResourceCollector
 
     public class MoneyCollector : MonoBehaviour, ICollector
     {
-        [SerializeField]
-        private ResourceStorage _storage;
-
-        private void OnTriggerEnter2D(Collider2D collision)
+        public void Collect(ref int storage, int count)
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                Collect(1);
-                Destroy(this.gameObject);
-            }
-        }
-
-        public void Collect(int count)
-        {
-            _storage.Coins += count;
+            storage += count;
+            Destroy(this.gameObject);
         }
     }
 }
